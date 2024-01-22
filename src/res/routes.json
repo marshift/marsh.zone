@@ -2,5 +2,9 @@
     {
         "name": "about",
         "path": "/about"
+    },
+    {
+        "name": "credits",
+        "path": "/credits"
     }
 ]
