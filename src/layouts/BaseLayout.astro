@@ -1,0 +1,35 @@
+---
+import "@unocss/reset/tailwind.css";
+import getProps from "@res/js/getProps";
+import Navbar from "@components/Navbar.astro";
+
+const { title, class: className, ogpType, ogpDescription } = getProps(Astro.props);
+const baseTitle = "the marsh zone";
+const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- TODO: Can I use my Uno theme for this? -->
+        <meta name="theme-color" content="#5e5db8" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:type" content={ogpType ?? "website"} />
+        <meta property="og:title" content={usableTitle} />
+        <meta property="og:description" content={ogpDescription ?? "hey there, i'm marsh!"} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{usableTitle}</title>
+        <slot name="head" />
+    </head>
+
+    <body class=`bg-[url(/background.jpg)] bg-no-repeat bg-cover h-full text-normal font-mono scrollbar scrollbar-track-color-tertiary scrollbar-thumb-color-accent scrollbar-w-2 ${className}`>
+        <slot name="extras"/> 
+        <div class="h-screen flex flex-row items-center justify-center gap-1">
+            <main class="bg-primary bg-opacity-75 backdrop-filter backdrop-blur border-2 border-accent-secondary w-[800px] h-[600px] p-2">
+                <slot />
+            </main>
+            <Navbar />
+        </div>
+    </body>
+</html>

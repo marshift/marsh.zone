@@ -1,0 +1,16 @@
+---
+export type Props = Route;
+
+const { name, path, image } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const fixedPath =
+    currentPath.length > 1 && currentPath.endsWith("/")
+        ? currentPath.slice(0, -1)
+        : currentPath;
+---
+
+<a href={path} class="w-full flex flex-col gap-2">
+    {image && <img class="p-2 pb-0" src={image} />}
+    <p class={`${image ? "text-xl" : ""} ${fixedPath === path ? "text-normal!" : "text-muted!"}`}>{name}</p>
+</a>

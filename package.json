@@ -1,0 +1,26 @@
+{
+    "name": "marsh.zone",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^2.0.5",
+        "@astrojs/rss": "^4.0.2",
+        "@unocss/astro": "^0.58.3",
+        "@unocss/reset": "^0.58.3",
+        "astro": "^4.2.1",
+        "astro-icon": "^1.0.2",
+        "unocss": "^0.58.3",
+        "unocss-preset-scrollbar": "^0.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.5",
+        "sass": "^1.70.0"
+    }
+}
