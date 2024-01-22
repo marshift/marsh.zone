@@ -10,7 +10,7 @@ const fixedPath =
         : currentPath;
 ---
 
-<a href={path} class="w-full flex flex-col gap-2">
-    {image && <img class="p-2 pb-0" src={image} />}
-    <p class={`${image ? "text-xl" : ""} ${fixedPath === path ? "text-normal!" : "text-muted!"}`}>{name}</p>
+<a href={path} class="flex sm:(flex-col w-full gap-1) lt-sm:(flex-row h-full) items-center">
+    {image && <img class="p-2 sm:(pb-0) lt-sm:(w-[40px])" src={image} />}
+    <span class={`${image ? "sm:(text-xl) lt-sm:(text-2xl)" : ""} ${fixedPath === path ? "text-normal!" : "text-muted!"}`}>{name}</span>
 </a>

@@ -3,12 +3,12 @@ import routes from "@res/routes.json";
 import NavbarItem from "@components/NavbarItem.astro";
 ---
 
-<div class="bg-primary bg-opacity-75 backdrop-filter backdrop-blur border-2 border-accent-secondary w-[100px] h-[600px] flex flex-col gap-2 text-center">
+<div class="bg-primary bg-opacity-75 backdrop-filter backdrop-blur border-2 border-accent-secondary flex sm:(w-[100px] h-[600px] flex-col) lt-sm:(flex-row w-full) gap-1 text-center">
     <NavbarItem
         name="marsh"
         path="/"
         image="/slime.png"
     />
-    <div class="border-1 border-accent-secondary mx-2" />
+    <div class="border-1 border-accent-secondary sm:(mx-2) lt-sm:(m-2)" />
     {routes.map((route: Route) => <NavbarItem {...route} /> )}
 </div>
