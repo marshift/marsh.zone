@@ -13,12 +13,13 @@ const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <!-- TODO: Can I use my Uno theme for this? -->
-        <meta name="theme-color" content="#5e5db8" />
+        <meta name="theme-color" content="#e22e88" />
         <meta name="generator" content={Astro.generator} />
         <meta property="og:type" content={ogpType ?? "website"} />
         <meta property="og:title" content={usableTitle} />
         <meta property="og:description" content={ogpDescription ?? "hey there, i'm marsh!"} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta property="og:image" content="/slime.png">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>{usableTitle}</title>
         <slot name="head" />
     </head>
