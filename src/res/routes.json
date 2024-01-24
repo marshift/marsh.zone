@@ -1,7 +1,11 @@
 [
     {
-        "name": "about",
-        "path": "/about"
+        "name": "blog",
+        "path": "/blog"
+    },
+    {
+        "name": "projects",
+        "path": "/projects"
     },
     {
         "name": "credits",
