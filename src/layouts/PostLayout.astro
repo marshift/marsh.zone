@@ -1,0 +1,15 @@
+---
+import type { MDXInstance } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogPost from "@components/BlogPost.astro";
+import Divider from "@components/Divider.astro";
+
+export type Props = MDXInstance<Post>;
+const post = Astro.props.frontmatter;
+---
+
+<BaseLayout {...Astro.props} ogpDescription={post.description}>
+    <BlogPost {...post} href={Astro.props.url} />
+    <Divider />
+    <slot />
+</BaseLayout>

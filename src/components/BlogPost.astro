@@ -1,0 +1,18 @@
+---
+export interface Props extends Post {
+    href?: string;
+};
+
+const { href, title, description, pubDate, tags } = Astro.props;
+---
+
+<div class="flex flex-col">
+    <div class="flex flex-row items-center text-header">
+        <a href={href} class="sm:(text-lg) lt-sm:(text-md) line-height-tight">{title}</a>
+        <span class="ml-auto lt-sm:(text-sm text-muted)">{pubDate.split("T")[0]}</span>
+    </div>
+    <div class="flex flex-row items-center lt-sm:(text-sm)">
+        <span>{description}</span>
+        <span class="ml-auto text-muted">{tags?.join(", ")}</span>
+    </div>
+</div>

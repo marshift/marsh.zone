@@ -1,0 +1,21 @@
+---
+import type { MDXInstance } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogPost from "@components/BlogPost.astro";
+import Divider from "@components/Divider.astro";
+
+const posts = await Astro.glob<Post>("./**/*.{md,mdx}") as any as MDXInstance<Post>[];
+
+// Magic code responsible for reverse chronological order
+const sortPosts = (p1: MDXInstance<Post>, p2: MDXInstance<Post>) => new Date(p2.frontmatter.pubDate).getTime() - new Date(p1.frontmatter.pubDate).getTime();
+---
+
+<BaseLayout title="blog" ogpDescription="excerpts of my mind, free for you to read!">
+    <h1>the swamp</h1>
+    <p>excerpts of my mind, free for you to read!</p>
+    <Divider />
+    {posts.sort(sortPosts).map((post, index) => <h>
+        <BlogPost {...post.frontmatter} href={post.url!} />
+        {index !== posts.length - 1 && <Divider />}
+    </h>)}
+</BaseLayout>
