@@ -24,7 +24,7 @@ const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
         <slot name="head" />
     </head>
 
-    <body class=`bg-tertiary bg-[url(/background.jpg)] bg-no-repeat bg-cover h-full text-normal font-mono scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-accent-alt scrollbar-w-2 ${className}`>
+    <body class=`bg-tertiary bg-[url(/background.jpg)] bg-no-repeat bg-cover h-full text-normal font-mono tracking-tight scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-accent-alt scrollbar-w-2 ${className}`>
         <slot name="extras"/> 
         <div class="h-screen flex sm:(flex-row justify-center) lt-sm:(flex-col-reverse justify-end p-2) items-center gap-1">
             <main class="bg-primary bg-opacity-75 backdrop-filter backdrop-blur border-2 border-accent-secondary overflow-y-auto p-2 sm:(w-[800px] h-[600px]) lt-sm:(w-full)">

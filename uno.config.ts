@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, transformerVariantGroup } from "unocss";
+import { defineConfig, presetUno, presetWebFonts, transformerVariantGroup } from "unocss";
 import { presetScrollbar } from "unocss-preset-scrollbar";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -7,6 +7,12 @@ export default defineConfig({
     presets: [
         presetUno(),
         presetScrollbar(),
+        presetWebFonts({
+            provider: "google",
+            fonts: {
+                mono: "JetBrains Mono"
+            }
+        }),
     ],
     transformers: [transformerVariantGroup()],
     preflights: [
@@ -28,7 +34,7 @@ export default defineConfig({
     ],
     theme: {
         fontFamily: {
-            mono: "Cozette",
+            cozy: "Cozette"
         },
         colors: {
             // Background

@@ -3,13 +3,6 @@
     src: url("/fonts/CozetteVector.woff2") format("woff2");
 }
 
-.astro-code {
-    border-radius: 0.375rem;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-}
-
 ::selection {
     background: "theme.colors.selection";
 }
@@ -25,27 +18,27 @@ a:hover {
 
 h1 {
     color: "theme.colors.header";
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     font-weight: 700 !important;
 }
 
 h2 {
     color: "theme.colors.header";
-    font-size: 1.75rem !important;
+    font-size: 1.25rem !important;
     font-weight: 600 !important;
     margin-top: 0.75rem !important;
 }
 
 h3 {
     color: "theme.colors.header";
-    font-size: 1.5rem !important;
+    font-size: 1.125rem !important;
     font-weight: 500 !important;
     margin-top: 0.5rem !important;
 }
 
 h4 {
     color: "theme.colors.header";
-    font-size: 1.25rem !important;
+    font-size: 1.0625rem !important;
     font-weight: 400 !important;
     margin-top: 0.25rem !important;
 }
@@ -60,8 +53,15 @@ code {
     font-family: "theme.fontFamily.mono" !important;
 }
 
-li {
-    list-style: square !important;
+.astro-code {
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-    margin-left: 1rem;
+}
+
+li {
+    list-style: circle !important;
+    margin-bottom: 0.25rem;
+    margin-left: 1.5rem;
 }
