@@ -1,0 +1,53 @@
+@use "../colors" as *;
+@use "../fonts";
+@use "../radii";
+
+@mixin _header {
+    @include fonts.header;
+    color: $text-header;
+}
+
+h1 {
+    @include _header;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+h2 {
+    @include _header;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+h3 {
+    @include _header;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h4 {
+    @include _header;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+h5 {
+    @include _header;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+h6 {
+    @include _header;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+code {
+    @include fonts.mono;
+    @include radii.small;
+    background-color: $background-tertiary;
+    color: $text-bright;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
