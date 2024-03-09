@@ -43,6 +43,16 @@ h6 {
     line-height: 1.25rem;
 }
 
+a {
+    color: $accent;
+    transition: opacity 0.1s;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
 code {
     @include fonts.mono;
     @include radii.small;
