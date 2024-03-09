@@ -25,9 +25,13 @@ const fullTitle = `${title} - ${Astro.site?.hostname}`;
 	</head>
 	<body>
 		<div class="container">
-			<main>
-				<slot />
-			</main>
+            <nav>
+                <img src="/images/pinky.png" width="32px" />
+                <a href="/" style="font-size: x-large;">marsh</a>
+            </nav>
+            <main>
+                <slot />
+            </main>
 		</div>
 	</body>
 </html>

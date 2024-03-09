@@ -3,46 +3,56 @@
 
 @use "colors" as *;
 @use "fonts";
-@use "radii";
-@use "blurs";
+@use "macros";
 @use "breakpoints";
 
 body {
     @include fonts.body;
-    min-height: 100%;
+    height: 100vh;
     background-image: url("/images/blooming_hope.png");
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: $background-tertiary;
     color: $text-normal;
 }
 
 main {
-    @include radii.medium;
-    @include blurs.medium;
-    background-color: $background-primary;
-    border: 2px solid $accent-darker;
-    padding: 0.5rem;
+    @include macros.blurred-box;
     overflow-y: auto;
 
     @include breakpoints.desktop {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
         height: 600px;
     }
+}
 
-    @include breakpoints.mobile {
+nav {
+    @include macros.blurred-box;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    a {
+        color: $text-bright;
+        font-size: large;
+    }
+
+    @include breakpoints.desktop {
         width: 100%;
-        margin: 0.5rem;
-        height: fit-content;
+        max-width: 800px;
     }
 }
 
 .container {
     display: flex;
-    height: 100vh;
-    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
 
     @include breakpoints.desktop {
         align-items: center;
+        justify-content: center;
     }
 }

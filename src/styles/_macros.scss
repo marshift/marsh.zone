@@ -1,0 +1,11 @@
+@use "colors" as *;
+@use "radii";
+@use "blurs";
+
+@mixin blurred-box {
+    @include radii.medium;
+    @include blurs.medium;
+    background-color: $background-primary;
+    border: 2px solid $accent-darker;
+    padding: 0.5rem;
+}
