@@ -1,0 +1,11 @@
+@mixin light {
+    backdrop-filter: blur(12px);
+}
+
+@mixin medium {
+    backdrop-filter: blur(18px);
+}
+
+@mixin heavy {
+    backdrop-filter: blur(24px);
+}

@@ -4,6 +4,8 @@
 @use "colors" as *;
 @use "fonts";
 @use "radii";
+@use "blurs";
+@use "breakpoints";
 
 body {
     @include fonts.body;
@@ -17,18 +19,30 @@ body {
 
 main {
     @include radii.medium;
+    @include blurs.medium;
     background-color: $background-primary;
-    backdrop-filter: blur(18px);
     border: 2px solid $accent-darker;
-    width: 800px;
-    height: 600px;
     padding: 0.5rem;
     overflow-y: auto;
+
+    @include breakpoints.desktop {
+        width: 800px;
+        height: 600px;
+    }
+
+    @include breakpoints.mobile {
+        width: 100%;
+        margin: 0.5rem;
+        height: fit-content;
+    }
 }
 
 .container {
     display: flex;
     height: 100vh;
-    align-items: center;
     justify-content: center;
+
+    @include breakpoints.desktop {
+        align-items: center;
+    }
 }
