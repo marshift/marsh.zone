@@ -1,0 +1,5 @@
+@use "../colors" as *;
+
+* {
+    scrollbar-color: rgba($accent, $transparency_factor) transparent;
+}

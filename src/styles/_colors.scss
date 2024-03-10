@@ -1,8 +1,10 @@
+// Misc
+$transparency_factor: 0.75;
+
 // Backgrounds
-$_transparency_factor: 0.75;
-$background-primary: rgba(#391f45, $_transparency_factor);
-$background-secondary: rgba(#351f43, $_transparency_factor);
-$background-tertiary: rgba(#321f42, $_transparency_factor);
+$background-primary: rgba(#391f45, $transparency_factor);
+$background-secondary: rgba(#351f43, $transparency_factor);
+$background-tertiary: rgba(#321f42, $transparency_factor);
 
 // Text
 $text-header: #fde2f0;
