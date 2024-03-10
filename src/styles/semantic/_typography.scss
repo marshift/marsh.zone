@@ -61,3 +61,7 @@ code {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+
+::selection {
+    background-color: rgba($accent-darker, 0.25);
+}
