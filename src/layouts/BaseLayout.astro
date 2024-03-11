@@ -1,6 +1,7 @@
 ---
 import "@/styles/base.scss";
 import extractProps from "@/utils/extractProps";
+import NavBar from "@/components/NavBar.astro";
 
 export interface Props {
     title: string;
@@ -25,10 +26,7 @@ const fullTitle = `${title} - ${Astro.site?.hostname}`;
 	</head>
 	<body>
 		<div class="container">
-            <nav>
-                <img src="/images/pinky.png" width="32px" />
-                <a href="/" style="font-size: x-large;">marsh</a>
-            </nav>
+            <NavBar />
             <main>
                 <slot />
             </main>

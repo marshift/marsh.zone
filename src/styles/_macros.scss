@@ -19,3 +19,9 @@
     margin-top: $size;
     margin-bottom: $size;
 }
+
+@mixin centered-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

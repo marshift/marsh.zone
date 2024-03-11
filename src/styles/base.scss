@@ -29,18 +29,16 @@ main {
 
 nav {
     @include macros.blurred-box;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    a {
-        color: $text-bright;
-        font-size: large;
-    }
+    @include macros.centered-row;
 
     @include breakpoints.desktop {
         width: 100%;
         max-width: 800px;
+    }
+
+    a {
+        color: $text-bright;
+        font-size: large;
     }
 }
 
