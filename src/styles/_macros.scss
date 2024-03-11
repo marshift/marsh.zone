@@ -9,3 +9,13 @@
     border: 2px solid $accent-darker;
     padding: 0.5rem;
 }
+
+@mixin margin-horizontal($size) {
+    margin-right: $size;
+    margin-left: $size;
+}
+
+@mixin margin-vertical($size) {
+    margin-top: $size;
+    margin-bottom: $size;
+}

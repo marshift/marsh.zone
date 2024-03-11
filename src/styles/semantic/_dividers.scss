@@ -1,0 +1,16 @@
+@use "../colors" as *;
+@use "../radii";
+@use "../macros";
+
+@mixin _divider-base {
+    @include radii.large;
+    border: 1px solid $accent-darker;
+}
+
+hr { @include _divider-base }
+
+.vertical-divider {
+    @include _divider-base;
+    @include macros.margin-horizontal(0.5rem);
+    height: 100%;
+}
