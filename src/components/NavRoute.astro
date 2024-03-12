@@ -1,0 +1,39 @@
+---
+export interface Props {
+    href: string;
+    title: string;
+    image?: string;
+    alt?: string;
+}
+
+const { href, title, image, alt } = Astro.props;
+
+const path = Astro.url.pathname;
+const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+---
+
+<style lang="scss">
+    @use "@/styles/colors" as *;
+    @use "@/styles/macros";
+
+    .nav-route {
+        &[data-has-image] {
+            @include macros.centered-row;
+            font-size: x-large;
+        }
+
+        &[data-is-current-route] {
+            color: $text-bright;
+        }
+    }
+</style>
+
+<a 
+    class="nav-route"
+    href={href}
+    data-is-current-route={fixedPath === href}
+    data-has-image={!!image}
+>
+    {image && <img src={image} alt={alt} width="32px">}
+    {title}
+</a>

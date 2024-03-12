@@ -1,5 +1,6 @@
 ---
 import VerticalDivider from "@/components/VerticalDivider.astro";
+import NavRoute from "@/components/NavRoute.astro";
 import routes from "@/pages/_routes.json";
 ---
 
@@ -7,11 +8,6 @@ import routes from "@/pages/_routes.json";
     // Logically I could style this in the global .scss files, but teeeechnically the `nav` element
     // is considered semantic therefore... I think this is better?
     @use "@/styles/macros";
-
-    .nav-logo {
-        @include macros.centered-row;
-        font-size: x-large;
-    }
 
     .nav-routes {
         @include macros.centered-row;
@@ -22,12 +18,14 @@ import routes from "@/pages/_routes.json";
 </style>
 
 <nav>
-    <a class="nav-logo" href="/">
-        <img alt="Image of Pinky, from Terraria, used as the site logo" src="/images/pinky.png" width="32px" />
-        <span>marsh</span>
-    </a>
+    <NavRoute
+        href="/"
+        title="marsh"
+        image="/images/pinky.png"
+        alt="Image of Pinky, from Terraria, used as the site logo"
+    />
     <VerticalDivider />
     <div class="nav-routes">
-        {routes.map((r) => r.href !== "/" && <a href={r.href}>{r.title}</a>)}
+        {routes.map((route) => route.href !== "/" && <NavRoute {...route} />)}
     </div>
 </nav>
