@@ -6,5 +6,9 @@
     {
         "href": "/blog",
         "title": "blog"
+    },
+    {
+        "href": "/credits",
+        "title": "credits"
     }
 ]
