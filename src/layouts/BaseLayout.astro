@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { title, description } = extractProps<Props>(Astro.props);
-const fullTitle = `${title} - ${Astro.site?.hostname}`;
+const fullTitle = `${title} - marsh's zone`;
 ---
 
 <html lang="en">
@@ -18,9 +18,10 @@ const fullTitle = `${title} - ${Astro.site?.hostname}`;
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#ff0a88" />
         <meta property="og:type" content="website">
         <meta property="og:image" content="/images/pinky.png">
-        <meta property="og:description" content={description ?? "hey there! i'm marsh."}>
+        <meta property="og:description" content={description ?? "welcome to my corner of the internet"}>
         <meta property="og:title" content={fullTitle}>
         <title>{fullTitle}</title>
 	</head>
