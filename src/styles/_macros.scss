@@ -25,3 +25,12 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+@mixin hide-scrollbar {
+    -ms-overflow-style: none; // IE and old Edge (do I need this?)
+    scrollbar-width: none; // Firefox
+
+    &::-webkit-scrollbar { // WebKit and Chromium
+        display: none;
+    }
+}

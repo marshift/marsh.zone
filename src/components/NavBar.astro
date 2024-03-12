@@ -12,6 +12,13 @@ import routes from "@/pages/_routes.json";
         @include macros.centered-row;
         font-size: x-large;
     }
+
+    .nav-routes {
+        @include macros.centered-row;
+        @include macros.hide-scrollbar;
+        overflow-x: auto;
+        height: 100%;
+    }
 </style>
 
 <nav>
@@ -20,5 +27,7 @@ import routes from "@/pages/_routes.json";
         <span>marsh</span>
     </a>
     <VerticalDivider />
-    {routes.map((r) => r.href !== "/" && <a href={r.href}>{r.title}</a>)}
+    <div class="nav-routes">
+        {routes.map((r) => r.href !== "/" && <a href={r.href}>{r.title}</a>)}
+    </div>
 </nav>
