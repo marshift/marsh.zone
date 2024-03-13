@@ -1,0 +1,22 @@
+---
+import type { MDXInstance } from "astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const posts = (await Astro.glob("./**/*.{md,mdx}")) as MDXInstance<IBlogPost>[];
+const chronoSort = (first: MDXInstance<IBlogPost>, second: MDXInstance<IBlogPost>) => new Date(first.frontmatter.pubDate).getTime() - new Date(second.frontmatter.pubDate).getTime();
+
+// much deduplication... such wow...
+const description = "excerpts of my mind, to be read at your leisure.";
+---
+
+<BaseLayout title="blog" description={description}>
+    <h1>the swamp</h1>
+    <p>{description}</p>
+    <hr />
+    <!-- TODO: This is very, very temporary! -->
+    {posts.sort(chronoSort).map((post, index) => <div>
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <span> - {post.frontmatter.description}</span>
+        {index + 1 !== posts.length && <hr />}
+    </div>)}
+</BaseLayout>
