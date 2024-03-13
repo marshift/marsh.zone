@@ -55,6 +55,15 @@ a {
     }
 }
 
+em {
+    font-style: italic;
+}
+
+strong {
+    // TODO: Maybe make `weights` a thing in _fonts.scss?
+    font-weight: 600;
+}
+
 code {
     @include fonts.mono;
     @include radii.small;
