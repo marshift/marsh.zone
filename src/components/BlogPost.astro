@@ -1,0 +1,27 @@
+---
+export interface Props extends IBlogPost {
+    href?: string;
+}
+
+const { title, description, tags, pubDate, href } = Astro.props;
+---
+
+<style lang="scss">
+    @use "@/styles/macros";
+
+    .blog-post-row {
+        @include macros.centered-row;
+        justify-content: space-between;
+    }
+</style>
+
+<div>
+    <div class="blog-post-row">
+        <a href={href}>{title}</a>
+        <span>{pubDate.split("T")[0]}</span>
+    </div>
+    <div class="blog-post-row">
+        <span>{description}</span>
+        {tags && <span>{tags.join(", ")}</span>}
+    </div>
+</div>
