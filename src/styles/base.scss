@@ -7,14 +7,12 @@
 @use "breakpoints";
 
 body {
-    @include fonts.body;
     height: 100vh;
     background-image: url("/images/blooming_hope.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $background-tertiary;
     color: $text-normal;
-    line-height: 1.25rem;
 }
 
 main {

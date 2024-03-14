@@ -4,10 +4,12 @@
 
 @mixin _divider-base {
     @include radii.large;
-    border: 1px solid $accent-darker;
+    border: 1px solid $accent-dim;
 }
 
-hr { @include _divider-base }
+hr { 
+    @include _divider-base;
+}
 
 .vertical-divider {
     @include _divider-base;

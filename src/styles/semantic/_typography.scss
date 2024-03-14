@@ -12,7 +12,7 @@ h1 {
     @include _header;
     font-size: 1.75rem;
     line-height: 2rem;
-    margin-top: unset; // Top header needs no spacing
+    margin-top: unset;
 }
 
 h2 {
@@ -45,6 +45,20 @@ h6 {
     line-height: 0.75rem;
 }
 
+body {
+    @include fonts.body;
+    line-height: 1.25rem;
+}
+
+code {
+    @include fonts.mono;
+    @include radii.small;
+    background-color: $background-tertiary;
+    color: $text-bright;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 a {
     color: $accent;
     transition: opacity 0.1s;
@@ -60,19 +74,11 @@ em {
 }
 
 strong {
-    // TODO: Maybe make `weights` a thing in _fonts.scss?
-    font-weight: 600;
+    font-weight: fonts.$weight-bold;
 }
 
-code {
-    @include fonts.mono;
-    @include radii.small;
-    background-color: $background-tertiary;
-    color: $text-bright;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
 
 ::selection {
-    background-color: rgba($accent-darker, 0.25);
+    background-color: $accent-dim;
+    color: $text-bright;
 }
