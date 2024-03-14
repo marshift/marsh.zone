@@ -1,5 +1,5 @@
-# marsh.zone
-marsh's little website, built with [Astro](//astro.build). it aims to employ the semantic HTML paradigm.
+# marsh's zone
+my corner of the web, built with [Astro](//astro.build) and [SCSS](//sass-lang.com). it aims to vaguely employ the Semantic HTML paradigm.
 
 ## commands
 | command                    | action                                           |
