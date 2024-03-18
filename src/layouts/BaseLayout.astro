@@ -24,6 +24,7 @@ const fullTitle = `${title} - marsh's zone`;
         <meta property="og:description" content={description ?? "welcome to my little website."}>
         <meta property="og:title" content={fullTitle}>
         <title>{fullTitle}</title>
+        <slot name="head" />
 	</head>
 	<body>
 		<div class="container">

@@ -2,12 +2,14 @@
 import type { MDXInstance } from "astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost.astro";
+import RssLink from "@/components/RssLink.astro";
 
 export type Props = MDXInstance<IBlogPost>;
 const post = Astro.props.frontmatter;
 ---
 
 <BaseLayout title={post.title} description={post.description}>
+    <RssLink slot="head" />
     <BlogPost {...post} href={Astro.props.url} />
     <hr />
     <slot />
