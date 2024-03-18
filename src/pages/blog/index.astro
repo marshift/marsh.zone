@@ -5,7 +5,7 @@ import BlogPost from "@/components/BlogPost.astro";
 import RssLink from "@/components/RssLink.astro";
 
 const posts = (await Astro.glob("./**/*.{md,mdx}")) as MDXInstance<IBlogPost>[];
-const chronoSort = (first: MDXInstance<IBlogPost>, second: MDXInstance<IBlogPost>) => new Date(first.frontmatter.pubDate).getTime() - new Date(second.frontmatter.pubDate).getTime();
+const revChronoSort = (first: MDXInstance<IBlogPost>, second: MDXInstance<IBlogPost>) => new Date(second.frontmatter.pubDate).getTime() - new Date(first.frontmatter.pubDate).getTime();
 
 // much deduplication... such wow...
 const description = "excerpts of my mind, to be read at your leisure.";
@@ -16,7 +16,7 @@ const description = "excerpts of my mind, to be read at your leisure.";
     <h1>the swamp</h1>
     <p>{description}</p>
     <hr />
-    {posts.sort(chronoSort).map((post, index) => <div>
+    {posts.sort(revChronoSort).map((post, index) => <div>
         <BlogPost {...post.frontmatter} href={post.url} />
         {index !== posts.length - 1 && <hr />}
     </div>)}
