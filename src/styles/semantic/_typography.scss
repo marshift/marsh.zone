@@ -1,6 +1,7 @@
 @use "../colors" as *;
 @use "../fonts";
 @use "../radii";
+@use "../macros";
 
 @mixin _header {
     @include fonts.header;
@@ -59,6 +60,18 @@ code {
     padding-right: 0.5rem;
 }
 
+.astro-code {
+    @include macros.margin-vertical(0.25rem);
+    @include radii.small;
+    background-color: $background-tertiary !important;
+    padding: 0.5rem;
+    
+    code {
+        background-color: transparent;
+        padding: unset;
+    }
+}
+
 a {
     color: $accent;
     transition: opacity 0.1s;
@@ -76,7 +89,6 @@ em {
 strong {
     font-weight: fonts.$weight-bold;
 }
-
 
 ::selection {
     background-color: $accent-dim;

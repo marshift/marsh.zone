@@ -23,3 +23,24 @@ for now, though, here's a basic markdown test:
 * a list
 * of items!
     - wow!
+
+```ts
+// some wonderful code
+const exampleVariable = "Hi! Lea! Hi!";
+
+class Evotar {
+    public name: string;
+    public introText: string;
+
+    constructor(name: string, intro: string) {
+        this.name = name;
+        this.introText = intro;
+        this.speak(this.introText);
+    }
+
+    // stub
+    speak: (text: string) => {};
+}
+
+new Evotar("Lea", exampleVariable);
+```

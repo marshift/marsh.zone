@@ -5,6 +5,11 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
     site: "https://marsh.zone",
     integrations: [mdx()],
+    markdown: {
+        shikiConfig: {
+            theme: "catppuccin-macchiato"
+        }
+    },
     devToolbar: {
         enabled: false,
     },
