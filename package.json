@@ -9,12 +9,14 @@
         "astro": "astro"
     },
     "dependencies": {
-        "astro": "^4.10.2"
+        "astro": "^4.10.2",
+        "solid-js": "^1.8.17"
     },
     "devDependencies": {
         "@astrojs/check": "^0.7.0",
         "@astrojs/mdx": "^3.1.0",
         "@astrojs/rss": "^4.0.6",
+        "@astrojs/solid-js": "^4.4.0",
         "sass": "^1.77.5",
         "typescript": "^5.4.5"
     }
