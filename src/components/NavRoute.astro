@@ -2,28 +2,31 @@
 export interface Props {
     href: string;
     title: string;
-    image?: string;
-    alt?: string;
 }
 
-const { href, title, image, alt } = Astro.props;
+const { href, title } = Astro.props;
 
+const hasLogo = href === "/";
 const path = Astro.url.pathname;
 const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
 ---
 
 <style lang="scss">
-    @use "@/styles/colors" as *;
+    @use "@/styles/colors";
     @use "@/styles/macros";
+    @use "@/styles/fonts";
 
     .nav-route {
-        &[data-has-image] {
+        color: colors.$text-normal;
+
+        &[data-has-logo] {
             @include macros.centered-row;
-            font-size: x-large;
+            font-size: fonts.$size-large;
+            margin-right: auto;
         }
 
         &[data-is-current-route] {
-            color: $text-bright;
+            color: colors.$text-bright;
         }
     }
 </style>
@@ -31,9 +34,13 @@ const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : pa
 <a 
     class="nav-route"
     href={href}
+    data-has-logo={hasLogo}
     data-is-current-route={fixedPath === href}
-    data-has-image={!!image}
 >
-    {image && <img src={image} alt={alt} width="32px">}
+    {hasLogo && <img
+        src="/images/pinky.png"
+        alt="Image of Pinky, from Terraria, used as the site logo"
+        width="24px"
+    />}
     {title}
 </a>

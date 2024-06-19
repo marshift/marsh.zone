@@ -1,9 +1,9 @@
-@use "../colors" as *;
+@use "../colors";
 @use "../radii";
 
 @-moz-document url-prefix() {
     * {
-        scrollbar-color: $accent transparent;
+        scrollbar-color: colors.$accent transparent;
         scrollbar-width: thin;
     }
 }
@@ -18,10 +18,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @include radii.small;
-    background-color: $accent;
+    background-color: colors.$accent;
+    border-radius: radii.$large;
 
     &:active {
-        background-color: $accent-dim;
+        background-color: colors.$accent-dim;
     }
 }

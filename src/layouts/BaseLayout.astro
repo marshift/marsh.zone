@@ -27,11 +27,10 @@ const fullTitle = `${title} - marsh's zone`;
         <slot name="head" />
 	</head>
 	<body>
-		<div class="container">
-            <NavBar />
-            <main>
-                <slot />
-            </main>
-		</div>
+        <NavBar />
+        <hr />
+        <main>
+            <slot />
+        </main>
 	</body>
 </html>

@@ -1,12 +1,5 @@
-@use "colors" as *;
+@use "colors";
 @use "radii";
-
-@mixin box {
-    @include radii.medium;
-    background-color: $bg-primary;
-    border: 2px solid $accent-dim;
-    padding: 0.5rem;
-}
 
 @mixin margin-horizontal($size) {
     margin-right: $size;
@@ -34,8 +27,13 @@
     gap: 0.5rem;
 }
 
+@mixin standout-box {
+    background-color: colors.$bg-primary !important;
+    border-radius: radii.$medium;
+    padding: 0.5rem;
+}
+
 @mixin hide-scrollbar {
-    -ms-overflow-style: none; // IE and old Edge (do I need this?)
     scrollbar-width: none; // Firefox
 
     &::-webkit-scrollbar { // WebKit and Chromium

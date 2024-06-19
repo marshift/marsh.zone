@@ -1,0 +1,37 @@
+@use "../colors";
+@use "../radii";
+@use "../macros";
+
+input[type="text"], select {
+    @include macros.standout-box;
+    display: block;
+    color: inherit;
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+
+    &:focus {
+        outline: 2px solid colors.$accent-dim;
+    }
+
+    &::placeholder {
+        color: colors.$text-dim;
+    }
+}
+
+button {
+    background-color: colors.$accent;
+    color: colors.$bg-secondary;
+    border-radius: radii.$large;
+    padding: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+
+    &:active {
+        background-color: colors.$accent-dim;
+    }
+
+    &:disabled {
+        cursor: initial;
+    }
+}

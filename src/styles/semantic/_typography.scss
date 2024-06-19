@@ -1,65 +1,31 @@
-@use "../colors" as *;
+@use "../colors";
 @use "../fonts";
 @use "../radii";
 @use "../macros";
 
 @mixin h-base {
     @include macros.margin-vertical(0.25rem);
-    color: $text-header;
+    color: colors.$text-header;
 }
 
 h1 {
     @include h-base;
-    font-size: 1.75rem;
+    font-size: fonts.$size-xxlarge;
     margin-top: 0;
 }
 
 h2 {
     @include h-base;
-    font-size: 1.5rem;
+    font-size: fonts.$size-xlarge;
 }
 
 h3 {
     @include h-base;
-    font-size: 1.25rem;
+    font-size: fonts.$size-large;
 }
 
 h4 {
     @include h-base;
-}
-
-body {
-    font-family: fonts.$sans;
-    line-height: normal;
-}
-
-code {
-    @include macros.padding-horizontal(0.5rem);
-    @include radii.small;
-    font-family: fonts.$mono;
-    background-color: $bg-tertiary;
-    color: $text-bright;
-}
-
-.astro-code {
-    @include macros.margin-vertical(0.25rem);
-    @include radii.small;
-    background-color: $bg-tertiary !important;
-    padding: 0.5rem;
-    
-    code {
-        padding: unset;
-    }
-}
-
-a {
-    color: $accent;
-    transition: opacity 0.1s;
-    text-decoration: none;
-
-    &:hover {
-        opacity: 0.75;
-    }
 }
 
 em {
@@ -70,7 +36,48 @@ strong {
     font-weight: bold;
 }
 
+
+label {
+    color: colors.$text-dim;
+    font-size: fonts.$size-small;
+}
+
+a {
+    color: colors.$accent;
+    transition: opacity 0.1s;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+code {
+    font-family: fonts.$font-mono;
+    background-color: colors.$bg-primary;
+    color: colors.$text-bright;
+    border-radius: radii.$small;
+}
+
+.astro-code {
+    @include macros.margin-vertical(0.25rem);
+    @include macros.hide-scrollbar;
+    @include macros.standout-box;
+}
+
+body {
+    font-family: fonts.$font-sans;
+    font-size: fonts.$size-normal;
+    color: colors.$text-normal;
+    line-height: normal;
+}
+
+footer {
+    text-align: center;
+    font-size: fonts.$size-small;
+    color: colors.$text-dim;
+}
+
 ::selection {
-    background-color: $accent-dim;
-    color: $text-bright;
+    background-color: colors.$accent-dim;
+    color: colors.$text-bright;
 }

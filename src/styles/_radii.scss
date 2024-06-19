@@ -1,11 +1,3 @@
-@mixin small {
-    border-radius: 4px;
-}
-
-@mixin medium {
-    border-radius: 8px;
-}
-
-@mixin large {
-    border-radius: 16px;
-}
+$small: 4px;
+$medium: 8px;
+$large: 16px;
