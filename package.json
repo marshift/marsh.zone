@@ -9,7 +9,9 @@
         "astro": "astro"
     },
     "dependencies": {
+        "@solely/simple-fm": "^1.7.2",
         "astro": "^4.10.2",
+        "date-fns": "^3.6.0",
         "solid-js": "^1.8.17"
     },
     "devDependencies": {
