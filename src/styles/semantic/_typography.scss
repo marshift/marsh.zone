@@ -36,8 +36,7 @@ strong {
     font-weight: bold;
 }
 
-
-label {
+label, sub, footer {
     color: colors.$text-dim;
     font-size: fonts.$size-small;
 }
@@ -69,12 +68,6 @@ body {
     font-size: fonts.$size-normal;
     color: colors.$text-normal;
     line-height: normal;
-}
-
-footer {
-    text-align: center;
-    font-size: fonts.$size-small;
-    color: colors.$text-dim;
 }
 
 ::selection {
