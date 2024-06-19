@@ -11,12 +11,12 @@ body {
     background-image: url("/images/blooming_hope.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: $background-tertiary;
+    background-color: $bg-tertiary;
     color: $text-normal;
 }
 
 main {
-    @include macros.blurred-box;
+    @include macros.box;
     overflow-y: auto;
 
     @include breakpoints.desktop {
@@ -27,7 +27,7 @@ main {
 }
 
 nav {
-    @include macros.blurred-box;
+    @include macros.box;
     @include macros.centered-row;
 
     @include breakpoints.desktop {

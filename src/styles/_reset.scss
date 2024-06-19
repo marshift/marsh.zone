@@ -1,4 +1,4 @@
-// http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+// #region http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,8 +42,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+// #endregion
 
-// marsh's additions
+// #region marsh's additions
 html {
     box-sizing: border-box;
 }
@@ -51,3 +52,4 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+// #endregion

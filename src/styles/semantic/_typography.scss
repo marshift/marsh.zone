@@ -3,71 +3,51 @@
 @use "../radii";
 @use "../macros";
 
-@mixin _header {
-    @include fonts.header;
+@mixin h-base {
+    @include macros.margin-vertical(0.25rem);
     color: $text-header;
-    margin-top: 0.5rem;
 }
 
 h1 {
-    @include _header;
+    @include h-base;
     font-size: 1.75rem;
-    line-height: 2rem;
-    margin-top: unset;
+    margin-top: 0;
 }
 
 h2 {
-    @include _header;
+    @include h-base;
     font-size: 1.5rem;
-    line-height: 1.75rem;
 }
 
 h3 {
-    @include _header;
+    @include h-base;
     font-size: 1.25rem;
-    line-height: 1.5rem;
 }
 
 h4 {
-    @include _header;
-    font-size: 1rem;
-    line-height: 1.25rem;
-}
-
-h5 {
-    @include _header;
-    font-size: 0.75rem;
-    line-height: 1rem;
-}
-
-h6 {
-    @include _header;
-    font-size: 0.5rem;
-    line-height: 0.75rem;
+    @include h-base;
 }
 
 body {
-    @include fonts.body;
-    line-height: 1.25rem;
+    font-family: fonts.$sans;
+    line-height: normal;
 }
 
 code {
-    @include fonts.mono;
+    @include macros.padding-horizontal(0.5rem);
     @include radii.small;
-    background-color: $background-tertiary;
+    font-family: fonts.$mono;
+    background-color: $bg-tertiary;
     color: $text-bright;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 .astro-code {
     @include macros.margin-vertical(0.25rem);
     @include radii.small;
-    background-color: $background-tertiary !important;
+    background-color: $bg-tertiary !important;
     padding: 0.5rem;
     
     code {
-        background-color: transparent;
         padding: unset;
     }
 }
@@ -87,7 +67,7 @@ em {
 }
 
 strong {
-    font-weight: fonts.$weight-bold;
+    font-weight: bold;
 }
 
 ::selection {

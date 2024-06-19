@@ -16,8 +16,6 @@ for now, though, here's a basic markdown test:
 ## Heading 2
 ### Heading 3
 #### Heading 4
-##### Heading 5
-###### Heading 6
 
 *italic* **bold** ***bold italic*** ~~strikethrough~~ [hyperlink](/)
 * a list

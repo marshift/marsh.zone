@@ -1,11 +1,9 @@
 @use "colors" as *;
 @use "radii";
-@use "blurs";
 
-@mixin blurred-box {
+@mixin box {
     @include radii.medium;
-    @include blurs.medium;
-    background-color: $background-primary;
+    background-color: $bg-primary;
     border: 2px solid $accent-dim;
     padding: 0.5rem;
 }
@@ -18,6 +16,16 @@
 @mixin margin-vertical($size) {
     margin-top: $size;
     margin-bottom: $size;
+}
+
+@mixin padding-horizontal($size) {
+    padding-right: $size;
+    padding-left: $size;
+}
+
+@mixin padding-vertical($size) {
+    padding-top: $size;
+    padding-bottom: $size;
 }
 
 @mixin centered-row {
