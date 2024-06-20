@@ -1,16 +1,19 @@
 ---
 import type { MDXInstance } from "astro";
+import { compareDesc } from "date-fns";
 import HeaderLayout from "@/layouts/HeaderLayout.astro";
 import BlogPost from "@/components/BlogPost.astro";
 import RssLink from "@/components/RssLink.astro";
 
-const posts = (await Astro.glob("./**/*.{md,mdx}")) as MDXInstance<IBlogPost>[];
-const revChronoSort = (first: MDXInstance<IBlogPost>, second: MDXInstance<IBlogPost>) => new Date(second.frontmatter.pubDate).getTime() - new Date(first.frontmatter.pubDate).getTime();
+type MDXPost = MDXInstance<IBlogPost>;
+
+const posts = (await Astro.glob("./**/*.{md,mdx}")) as MDXPost[];
+const sortPosts = (first: MDXPost, second: MDXPost) => compareDesc(new Date(first.frontmatter.pubDate), new Date(second.frontmatter.pubDate));
 ---
 
 <HeaderLayout title="the swamp" description="excerpts of my mind, to be read at your leisure.">
     <RssLink slot="head" />
-    {posts.sort(revChronoSort).map((post, index) => <>
+    {posts.sort(sortPosts).map((post, index) => <>
         <BlogPost {...post.frontmatter} href={post.url} />
         {index !== posts.length - 1 && <hr />}
     </>)}
