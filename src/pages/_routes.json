@@ -8,6 +8,10 @@
         "title": "blog"
     },
     {
+        "href": "/tools",
+        "title": "tools"
+    },
+    {
         "href": "/credits",
         "title": "credits"
     }

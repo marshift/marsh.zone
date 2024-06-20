@@ -11,3 +11,9 @@ interface IContact {
     username: string;
     href?: string;
 }
+
+interface ITool {
+    name: string;
+    description: string;
+    href: string;
+}

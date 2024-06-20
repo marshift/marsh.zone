@@ -1,0 +1,15 @@
+---
+import HeaderLayout from "@/layouts/HeaderLayout.astro";
+
+const tools: Array<ITool> = [
+    {
+        name: "switchboard",
+        description: "simple discord rna download tool",
+        href: "//switchboard.marsh.zone",
+    },
+];
+---
+
+<HeaderLayout title="tools" description="i've built a few neat things - some of which you may find useful.">
+    <ul>{tools.map((tool) => <li><a href={tool.href}>{tool.name}</a> - {tool.description}</li>)}</ul>
+</HeaderLayout>
