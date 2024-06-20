@@ -1,5 +1,6 @@
 ---
 title: "credits"
+description: "things that helped this site to exist."
 layout: "@/layouts/BaseLayout.astro"
 ---
 
