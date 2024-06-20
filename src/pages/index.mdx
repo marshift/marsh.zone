@@ -1,0 +1,40 @@
+---
+title: "home"
+layout: "@/layouts/BaseLayout.astro"
+---
+
+import Contact from "@/components/Contact.astro"
+import LastFM from "@/components/LastFM";
+import getAge from "@/utils/getAge";
+
+# welcome!
+hey there, i'm marsh - a self-taught software developer, sysadmin and so-so vocalist.
+this is my little website!
+
+## about me
+* i am {getAge()}.
+* i am transgender (mtf) and asexual, using she/they pronouns.
+* i have been told that i am kind, easygoing ~~and a little unhinged~~.
+
+## pseudonyms
+in conversation, i prefer "marsh", but when prompted for a username, i tend to pick one of the following:
+* marshift
+* marsh
+* msh
+
+## programming
+my favourite programming languages are TypeScript and JavaScript, but i am partial to Lua, Python, and a plethora of others, too.
+a complete list of the things i make can be found on [my GitHub](//github.com/marshift/repositories).
+
+## music
+i listen to quite a lot of music, and have an extremely varied music taste. most recently, i've listened to:
+<LastFM client:only="solid">
+    <ul slot="fallback">
+        <li>normally there'd be a list of my recent tracks here - but your browser does not have JavaScript enabled!</li>
+    </ul>
+</LastFM>
+<sub>this list is from [my last.fm](//last.fm/user/marshift) - you can see more about my music taste there!</sub>
+
+## contact
+i can be found in a variety of places across the web, however i use the services below the most.
+<Contact />

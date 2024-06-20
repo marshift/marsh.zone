@@ -5,3 +5,9 @@ interface IBlogPost {
     pubDate: string;
     tags?: string[];
 }
+
+interface IContact {
+    service: string;
+    username: string;
+    href?: string;
+}

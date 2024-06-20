@@ -1,0 +1,25 @@
+---
+const contacts: Array<IContact> = [
+    {
+        service: "fediverse",
+        username: "@marsh@fedi.on-a-ps4.lol",
+        href: "//fedi.on-a-ps4.lol/marsh",
+    },
+    {
+        service: "email",
+        username: "marshift (at) riseup (dot) net",
+    },
+    {
+        service: "GitHub",
+        username: "marshift",
+        href: "//github.com/marshift",
+    },
+    {
+        service: "Discord",
+        username: "@marshift",
+        href: "//discord.com/users/257496590401536000",
+    }
+];
+---
+
+<ul>{contacts.map((c) => <li>{c.service} - <a href={c.href}>{c.username}</a></li>)}</ul>
