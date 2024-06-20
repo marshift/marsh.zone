@@ -8,7 +8,7 @@ export interface Props {
     description?: string;
 }
 
-const { title, description } = extractProps<Props>(Astro.props);
+const { title, description } = extractProps(Astro.props);
 const fullTitle = `${title} - marsh's zone`;
 ---
 

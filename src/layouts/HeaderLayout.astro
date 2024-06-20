@@ -1,0 +1,16 @@
+---
+import type { Props } from "@/layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import extractProps from "@/utils/extractProps";
+
+const props = extractProps(Astro.props);
+---
+
+<BaseLayout {...props}>
+    <header>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
+    </header>
+    <hr />
+    <slot />
+</BaseLayout>
