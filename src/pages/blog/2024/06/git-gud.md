@@ -7,7 +7,7 @@ layout: "@/layouts/PostLayout.astro"
 ---
 
 # hey!
-if you're reading this, you likely want to know more about the wonderful tool that is the `git` version control system (referred to as just). that's great! i'm no expert myself, but i've definitely used it enough to know my way around the various pitfalls and confusions that beginners encounter all too often. without further ado, let's begin!
+if you're reading this, you likely want to know more about the wonderful tool that is the git version control system (referred to as just "git" from now on). that's great! i'm no expert myself, but i've definitely used it enough to know my way around the various pitfalls and confusions that beginners encounter all too often. without further ado, let's begin!
 
 <sub>this guide paraphrases from the wonderful [Pro Git book, written by Scott Chacon and Ben Straub](//git-scm.com/book). give it a read!</sub>
 
