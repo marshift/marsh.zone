@@ -37,7 +37,7 @@ to turn a directory onto your computer into a git repository, simply:
 git init
 ```
 
-this creates the `.git` folder, which contains the repository metadata and internals. generally, you wont need to look inside and you'll especially never need to modify anything.
+this creates the `.git` folder, which contains the repository metadata and internals. generally, you won't need to look inside and you'll especially never need to modify anything.
 
 ### committing changes
 after creating your repository, it's a good idea to create an "initial commit", which documents the state of the files before any further work is done. if you don't have any files in there already, create your initial commit when you're happy with the first set of files you *do* have. this can be done with:
