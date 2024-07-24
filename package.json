@@ -12,6 +12,7 @@
         "@solely/simple-fm": "^1.7.2",
         "astro": "^4.12.2",
         "date-fns": "^3.6.0",
+        "murky": "github:marshift/murky",
         "solid-js": "^1.8.18"
     },
     "devDependencies": {

@@ -1,0 +1,11 @@
+@use "murky/styles/base";
+@use "murky/styles/macros";
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    @include macros.centered-row;
+}
