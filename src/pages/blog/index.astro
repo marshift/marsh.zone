@@ -2,7 +2,7 @@
 import type { MDXInstance } from "astro";
 import { compareDesc } from "date-fns";
 import HeaderLayout from "@/layouts/HeaderLayout.astro";
-import BlogPost from "@/components/BlogPost.astro";
+import BlogPost, { type IBlogPost } from "@/components/BlogPost.astro";
 import RssLink from "@/components/RssLink.astro";
 
 type MDXPost = MDXInstance<IBlogPost>;

@@ -1,4 +1,10 @@
 ---
+interface IContact {
+    service: string;
+    username: string;
+    href?: string;
+}
+
 const contacts: Array<IContact> = [
     {
         service: "fediverse",

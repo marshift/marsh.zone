@@ -1,6 +1,12 @@
 ---
 import HeaderLayout from "@/layouts/HeaderLayout.astro";
 
+interface ITool {
+    name: string;
+    description: string;
+    href: string;
+}
+
 const tools: Array<ITool> = [
     {
         name: "switchboard",

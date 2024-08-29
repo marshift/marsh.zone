@@ -1,7 +1,7 @@
 ---
 import type { MDXInstance } from "astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import BlogPost from "@/components/BlogPost.astro";
+import BlogPost, { type IBlogPost } from "@/components/BlogPost.astro";
 import RssLink from "@/components/RssLink.astro";
 
 export type Props = MDXInstance<IBlogPost>;

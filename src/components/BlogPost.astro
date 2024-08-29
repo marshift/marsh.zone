@@ -1,4 +1,11 @@
 ---
+export interface IBlogPost {
+    title: string;
+    description: string;
+    pubDate: string;
+    tags?: string[];
+}
+
 export interface Props extends IBlogPost {
     href?: string;
 }
