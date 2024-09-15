@@ -19,7 +19,7 @@ importers:
         version: 3.6.0
       murky:
         specifier: github:marshift/murky
-        version: https://codeload.github.com/marshift/murky/tar.gz/f6494cabf1a700a4e6464d39e5b650b5efffe3c5
+        version: link:../murky
       solid-js:
         specifier: ^1.8.22
         version: 1.8.22
@@ -1497,10 +1497,6 @@ packages:
 
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
-
-  murky@https://codeload.github.com/marshift/murky/tar.gz/f6494cabf1a700a4e6464d39e5b650b5efffe3c5:
-    resolution: {tarball: https://codeload.github.com/marshift/murky/tar.gz/f6494cabf1a700a4e6464d39e5b650b5efffe3c5}
-    version: 1.3.0
 
   nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
@@ -4038,8 +4034,6 @@ snapshots:
   ms@2.1.2: {}
 
   muggle-string@0.4.1: {}
-
-  murky@https://codeload.github.com/marshift/murky/tar.gz/f6494cabf1a700a4e6464d39e5b650b5efffe3c5: {}
 
   nanoid@3.3.7: {}
 

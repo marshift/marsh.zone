@@ -22,6 +22,7 @@ const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : pa
         &[data-has-logo] {
             @include macros.centered-row;
             font-size: fonts.$size-large;
+            image-rendering: -moz-crisp-edges; // Damn it Chromium
             margin-right: auto;
         }
 
@@ -38,8 +39,8 @@ const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : pa
     data-is-current-route={fixedPath === href}
 >
     {hasLogo && <img
-        src="/images/pinky.png"
-        alt="Image of Pinky, from Terraria, used as the site logo"
+        src="/images/bunny.png"
+        alt="The Terraria bunny sprite, used as the site logo"
         width="24px"
     />}
     {title}
