@@ -8,7 +8,7 @@ export default defineConfig({
     integrations: [solid(), mdx()],
     markdown: {
         shikiConfig: {
-            theme: "catppuccin-macchiato",
+            theme: "everforest-dark",
         },
     },
     devToolbar: {

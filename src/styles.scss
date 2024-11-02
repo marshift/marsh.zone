@@ -4,6 +4,11 @@
 body {
     max-width: 900px;
     margin: 0 auto;
+    background-image: url("/images/verdant.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 nav {
