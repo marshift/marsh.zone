@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { title, description } = extractProps(Astro.props);
-const fullTitle = `${title} - marsh's zone`;
+const fullTitle = `${title} - marsh.zone`;
 ---
 
 <html lang="en">
@@ -21,7 +21,7 @@ const fullTitle = `${title} - marsh's zone`;
         <meta name="theme-color" content="#FED143" />
         <meta property="og:type" content="website">
         <meta property="og:image" content="/images/bunny.png">
-        <meta property="og:description" content={description ?? "welcome to my little website."}>
+        <meta property="og:description" content={description ?? "part-time software engineer, full-time rabbit"}>
         <meta property="og:title" content={fullTitle}>
         <title>{fullTitle}</title>
         <slot name="head" />

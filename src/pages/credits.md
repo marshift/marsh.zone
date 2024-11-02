@@ -5,7 +5,9 @@ layout: "@/layouts/BaseLayout.astro"
 ---
 
 # credits
-this website belongs to me, but it wouldn't be possible without these lovely things:
+this website is mine, but it wouldn't be possible without these lovely things:
 
-* the bunny in the navbar and favicon is from [Terraria](//terraria.com/)
+* the background is a highly recoloured screenshot of [Verdant Falls](//riskofrain2.wiki.gg/wiki/Verdant_Falls) from [Risk of Rain 2](//store.steampowered.com/app/632360/)
+    - i sourced it from [this post](//old.reddit.com/r/wallpapers/comments/1d50vdt/)
+* the bunny in the navbar and favicon is from [Terraria](//terraria.org/)
 * you, for taking the time to check out my little corner of the web :>
