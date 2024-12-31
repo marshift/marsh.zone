@@ -19,14 +19,14 @@ const fixedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : pa
     .nav-route {
         color: colors.$text-normal;
 
-        &[data-has-logo] {
+        &[data-has-logo="true"] {
             @include macros.centered-row;
             font-size: fonts.$size-large;
             image-rendering: -moz-crisp-edges; // Damn it Chromium
             margin-right: auto;
         }
 
-        &[data-is-current-route] {
+        &[data-is-current-route="true"] {
             color: colors.$text-bright;
         }
     }

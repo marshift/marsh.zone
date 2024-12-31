@@ -5,16 +5,17 @@ import HeaderLayout from "@/layouts/HeaderLayout.astro";
 import BlogPost, { type IBlogPost } from "@/components/BlogPost.astro";
 import RssLink from "@/components/RssLink.astro";
 
-type MDXPost = MDXInstance<IBlogPost>;
-
-const posts = (await Astro.glob("./**/*.{md,mdx}")) as MDXPost[];
-const sortPosts = (first: MDXPost, second: MDXPost) => compareDesc(new Date(first.frontmatter.pubDate), new Date(second.frontmatter.pubDate));
+export type MDXPost = MDXInstance<IBlogPost>;
+const posts = import.meta.glob<MDXPost>("./**/*.{md,mdx}", { eager: true });
 ---
 
 <HeaderLayout title="the swamp" description="excerpts of my mind, to be read at your leisure.">
     <RssLink slot="head" />
-    {posts.sort(sortPosts).map((post, index) => <>
-        <BlogPost {...post.frontmatter} href={post.url} />
-        {index !== posts.length - 1 && <hr />}
-    </>)}
+    {Object.values(posts)
+        .sort((a, b) => compareDesc(new Date(a.frontmatter.pubDate), new Date(b.frontmatter.pubDate)))
+        .map((post, index, arr) => (<>
+            <BlogPost {...post.frontmatter} href={post.url} />
+            {index !== arr.length - 1 && <hr />}
+        </>))
+    }
 </HeaderLayout>
